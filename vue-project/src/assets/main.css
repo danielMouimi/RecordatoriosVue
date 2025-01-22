@@ -1,0 +1,14 @@
+  body {
+    display: flex;
+    place-items: center;
+    background-color: black;
+    color: white;
+  }
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 3vh 3vw;
+  }
+
