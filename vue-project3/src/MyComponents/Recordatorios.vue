@@ -19,9 +19,9 @@ const user = useCurrentUser();
 var li = [];
 console.log(user);
 if (user.value.uid == 'gXn8HOEU7RcBmSd3Ah6FJKc41Ty1') {
-  li = useCollection(query(collection(db, 'Recordatorios'),orderBy('priority','desc')));
+  li = useCollection(query(collection(db, 'Recordatorios'),orderBy('name','asc')));
 }else {
-li = useCollection(query(collection(db, 'Recordatorios'),where('user','==',user.value.uid),orderBy('priority','desc')));
+li = useCollection(query(collection(db, 'Recordatorios'),where('user','==',user.value.uid),orderBy('name','asc')));
 }
 
 
@@ -154,7 +154,7 @@ function priority(id,p) {
 </template>
 
 <style>
-/* Animaciones para el grupo de transición */
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
